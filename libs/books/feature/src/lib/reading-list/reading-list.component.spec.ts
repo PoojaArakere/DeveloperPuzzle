@@ -23,4 +23,11 @@ describe('ReadingListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  cy.get('[data-testing="snackbar-reading-list"]').click();
+
+    cy.get('[data-testing="snackbar-list-container"]').should(
+      'contain.text',
+      'Added book'
+    );
 });

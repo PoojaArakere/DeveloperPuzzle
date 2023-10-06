@@ -33,11 +33,10 @@
           <div>
             <button
               class="modal-button"
+              data-testing="toggle-reading-list"
               mat-flat-button
               color="primary"
-              (click)="addBookToReadingList(b)"
-              [disabled]="b.isAdded"
-               aria-label="Want to Read"
+              (click)="addBookToReadingList(b, act)"
             >
               Want to Read
             </button>
